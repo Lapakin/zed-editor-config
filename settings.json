@@ -1,0 +1,87 @@
+{
+  // Changes the default file and folder icons in the sidebar to familiar Material Design style icons for better visual navigation.
+  "icon_theme": "Material Icon Theme",
+  
+  // Enables GitHub Copilot as the provider for code auto-completion.
+  "edit_predictions": {
+    "provider": "copilot"
+  },
+
+  // Disables sending any analytics, crash logs, and usage metrics to Zed servers for privacy reasons.
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  
+  // Applies the JetBrains IDE keymap (like GoLand or WebStorm).
+  "base_keymap": "JetBrains",
+  
+  // Increases the font size for the editor's UI (menus, sidebar, tabs).
+  "ui_font_size": 16,
+  // Increases the font size specifically for the code text in the editor.
+  "buffer_font_size": 15,
+  
+  // Configures themes.
+  "theme": {
+    "mode": "dark",
+    "light": "GitHub Light High Contrast",
+    "dark": "GitHub Dark Dimmed"
+  },
+  
+  // Docks the project panel to the left side of the screen.
+  "project_panel": {
+    "dock": "left"
+  },
+  
+  // Sets a font size for the built-in terminal.
+  "terminal": {
+    "font_size": 14
+  },
+  
+  // Disables contextual alternatives. Because of this, complex operators (e.g., !=, >=, ->) will display as separate characters rather than merging into a single special symbol.
+  "buffer_font_features": {
+    "calt": false
+  },
+  
+  // Linter and code analyzer settings:
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true
+    }
+  },
+  
+  // Allows showing diagnostics of the lowest severity level to see all possible advice.
+  "diagnostics_max_severity": "hint",
+  
+  // Displays colored markers on the scrollbar for all diagnostic types.
+  "scrollbar": {
+    "diagnostics": "all"
+  },
+  
+  // LSP settings specifically for Go:
+  "lsp": {
+    "gopls": {
+      "binary": {
+        "path": "[PATH_TO_BIN_GOPLS]"
+      },
+      "initialization_options": {
+        "usePlaceholders": false, // Disables placeholder insertion during function auto-completion.
+        "hints": {
+          "assignVariableTypes": true,
+          "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
+          "constantValues": true,
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": true
+        }
+      }
+    }
+  },
+  
+  // Automatically saves the file when the editor loses focus. 
+  // WARNING: To avoid overwriting external AI modifications, consider disabling this 
+  // or ensure you reload the file before making changes.
+  "autosave": "on_focus_change"
+}
