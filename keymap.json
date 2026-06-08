@@ -1,0 +1,21 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-f10": "editor::SpawnNearestTask",
+      "ctrl-alt-y": "editor::ReloadFile",
+    },
+  },
+]
